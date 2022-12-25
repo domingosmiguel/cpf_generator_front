@@ -1,0 +1,5 @@
+{
+  "name": "cpf_generator_front",
+  "type": "module",
+  "main": "src/server.js"
+}
