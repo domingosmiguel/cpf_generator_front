@@ -31,6 +31,7 @@ const getCPF = async () => {
     input.value = promise.data;
     navigator.clipboard.writeText(promise.data);
   } catch (error) {
+    input.placeholder = 'Novo CPF/CNPJ';
     console.log(error);
   } finally {
     checkboxes_button.forEach((obj) => (obj.disabled = false));
