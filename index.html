@@ -16,9 +16,13 @@
     ></script>
     <title>CPF Generator</title>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Caramel&family=Russo+One&display=swap');
       .title {
-        font-family: 'Prosto One', cursive;
+        font-family: 'Russo One', sans-serif;
+      }
+      .signature {
+        /* font-size: 0.7rem; */
+        font-family: 'Caramel', cursive;
       }
     </style>
   </head>
@@ -28,7 +32,10 @@
       id="landing-page"
       class="navbar position-absolute justify-content-around bg-light w-100 shadow-sm"
     >
-      <div class="title">Gerador de CPF</div>
+      <div class="title fs-3 d-flex align-items-baseline">
+        Gerador de CPF
+        <div class="signature fs-4 ms-1">by Miguel</div>
+      </div>
       <div class="btn-group" role="group" aria-label="Second group">
         <button id="light" type="button" class="btn btn-light">light</button>
         <button id="dark" type="button" class="btn btn-dark">dark</button>
