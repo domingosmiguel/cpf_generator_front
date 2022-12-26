@@ -10,7 +10,7 @@ const checkbox_mask = document.getElementById('checkbox_mask');
 
 const getCPF = async () => {
   input.value = '';
-  input.placeholder = 'Gerando CPF...';
+  input.placeholder = 'Gerando CPF/CNPJ valido...';
   try {
     const promise = await axios.get(
       `https://cpf-generator-api-8nmz.onrender.com/${
