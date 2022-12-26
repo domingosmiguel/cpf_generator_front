@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Caramel&family=Russo+One&display=swap');
+* {
+  box-sizing: border-box;
+  cursor: default;
+  font-weight: 400;
+}
+:root::-webkit-scrollbar {
+  display: none;
+}
+.title {
+  font-family: 'Russo One', sans-serif;
+  display: flex;
+}
+.signature {
+  font-family: 'Caramel', cursive;
+}
+.form {
+  margin-top: 2.2rem !important;
+}
+@media (max-width: 21rem) {
+  .title {
+    display: block;
+  }
+  .form {
+    margin-top: 4.5rem !important;
+  }
+}
