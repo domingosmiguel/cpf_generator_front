@@ -1,14 +1,25 @@
+const SPINNER = `<span class="spinner-border spinner-border-sm ms-2 me-2" role="status" aria-hidden="true"></span>`;
+
 const body = document.querySelector('#middle');
+
 const checkbox_label_cpf = document.getElementById('checkbox_label_cpf');
 const checkbox_label_cnpj = document.getElementById('checkbox_label_cnpj');
 const checkbox_label_mask = document.getElementById('checkbox_label_mask');
 const labels = [checkbox_label_cpf, checkbox_label_cnpj, checkbox_label_mask];
 
 const input = document.getElementById('newCPF');
+
+const button = document.getElementById('submit');
+
 const checkbox_cpf = document.getElementById('checkbox_cpf');
+const checkbox_cnpj = document.getElementById('checkbox_cnpj');
 const checkbox_mask = document.getElementById('checkbox_mask');
 
+const checkboxes_button = [checkbox_cpf, checkbox_cnpj, checkbox_mask, button];
+
 const getCPF = async () => {
+  checkboxes_button.forEach((obj) => (obj.disabled = true));
+  button.innerHTML = SPINNER;
   input.value = '';
   input.placeholder = 'Gerando CPF/CNPJ valido...';
   try {
@@ -21,6 +32,9 @@ const getCPF = async () => {
     navigator.clipboard.writeText(promise.data);
   } catch (error) {
     console.log(error);
+  } finally {
+    checkboxes_button.forEach((obj) => (obj.disabled = false));
+    button.innerHTML = 'Gerar';
   }
 };
 
