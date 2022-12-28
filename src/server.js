@@ -21,7 +21,9 @@ const getCPF = async () => {
   checkboxes_button.forEach((obj) => (obj.disabled = true));
   button.innerHTML = SPINNER;
   input.value = '';
-  input.placeholder = 'Gerando CPF/CNPJ valido...';
+  input.placeholder = `Gerando ${
+    checkbox_cpf.checked ? 'CPF' : 'CNPJ'
+  } valido...`;
   try {
     const promise = await axios.get(
       `https://cpf-generator-api-8nmz.onrender.com/${
